@@ -27,7 +27,6 @@ const init = () => {
 
 const goToNext = () => {
   quizCount++;
-  // クイズをまだ続ける場合
   if(quizCount < quizLen){
     init(quizCount);
   } else {
@@ -46,7 +45,6 @@ const count = (elm) => {
 };
 
 const showEnd = () => {
-  // 変更点
   var quest = "";
   if(!localStorage.getItem('js-question')) {
     quest = "データがありません";
@@ -61,7 +59,6 @@ init();
 let answersIndex = 0;
 let answersLen = quiz.answers.length;
 
-// 画面遷移
 while(answersIndex < answersLen){
   $buttons[answersIndex].addEventListener('click', (e) => {
     var quest = document.getElementById("js-question").value;
