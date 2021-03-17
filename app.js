@@ -8,7 +8,7 @@ const $doc = document;
 const $question = $doc.getElementById('js-question');
 const $buttons = $doc.querySelectorAll('.btn');
 
-const quizLen = 2;
+const quizLen = 4;
 let quizCount = 0;
 let score = 0;
 
@@ -49,9 +49,8 @@ const count = (elm) => {
   goToNext();
 };
 
+// ここでアラートを表示するのでgetItemはここが適切かと思われ
 const showEnd = () => {
-
-
   // 変更点
   var quest = "";
   if(!localStorage.getItem('js-question')) {
@@ -66,8 +65,9 @@ const showEnd = () => {
     window.alert('終了！あなたのスコアは' + score + '/' + quizLen + 'です');
     window.alert('更新を行ってください' + quest);
     
-    const $items = $doc.getElementById('js-items');
-    $items.style.visibility = 'hidden';
+    // ボタンなどを消すやつ
+    // const $items = $doc.getElementById('js-items');
+    // $items.style.visibility = 'hidden';
 };
 
 init();
@@ -82,10 +82,11 @@ while(answersIndex < answersLen){
 
     // 変更点
     let quest = document.getElementById("js-question").value;
-    // var mydata = document.getElementById("mydata_in").value;
     console.log(`js-question = ${quest}`);
     localStorage.setItem('js-question', quest);
-    // quest.value = '';
+
+    let questi = $question
+    questi.value = '';
   });
   answersIndex++;
 }
