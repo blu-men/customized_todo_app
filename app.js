@@ -47,7 +47,7 @@ const count = (elm) => {
 const showEnd = () => {
   var quest = "";
   if(!localStorage.getItem('js-question')) {
-    quest = "データがありません";
+    quest = "タスクを入力してください!";
   } else {
     quest = localStorage.getItem('js-question');
   }
