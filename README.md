@@ -10,4 +10,4 @@
 OKボタンを押すと、「入力したタスク : 達成度」、ともう一度alertが表示されます。
 
 ## 使用技術
-JavaScript, HTML5, CSS
+JavaScript, HTML5, CSSなど
