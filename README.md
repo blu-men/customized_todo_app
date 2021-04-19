@@ -11,3 +11,4 @@ OKボタンを押すと、「入力したタスク : 達成度」、ともう一
 
 ## 使用技術
 JavaScript, HTML5, CSSなど
+タスク内容などの保存は、JavaScriptのlocalStrageという技術を用いております。
